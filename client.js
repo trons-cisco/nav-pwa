@@ -89,11 +89,11 @@ manualButton.addEventListener('click', async function(e) {
    	}
 });
 
-const autoButton = document.getElementById('autoButton');
+const offButton = document.getElementById('offButton');
 autoButton.addEventListener('click', async function(e) {
    try {
-		xapi.Config.UserInterface.LedControl.Mode.set('Auto');
-		content.textContent = `Set Led Control to Auto`;
+		xapi.Config.UserInterface.LedControl.Mode.set('Off');
+		content.textContent = `Set Led Control to Off`;
 
    	} catch(e) {
 		content.textContent = e.message;
