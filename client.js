@@ -90,7 +90,7 @@ manualButton.addEventListener('click', async function(e) {
 });
 
 const offButton = document.getElementById('offButton');
-autoButton.addEventListener('click', async function(e) {
+offButton.addEventListener('click', async function(e) {
    try {
 		xapi.Command.UserInterface.LedControl.Color.Set({ Color: 'Off' });
 		content.textContent = `Set Led Control to Off`;
