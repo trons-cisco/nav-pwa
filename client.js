@@ -77,14 +77,29 @@ redButton.addEventListener('click', async function(e) {
    	}
 });
 
-//xapi to set LED mode to off
-const offButton = document.getElementById('offButton');
-offButton.addEventListener('click', async function(e) {
+const manualButton = document.getElementById('manualButton');
+manualButton.addEventListener('click', async function(e) {
    try {
-		xapi.Command.UserInterface.LedControl.Color.Set({ Color: 'Red' });
+		//Example xapi xConfiguration
+		xapi.Config.UserInterface.LedControl.Mode.set('Manual');
+		content.textContent = `Set Led Control to Manual`;	
+
    	} catch(e) {
 		content.textContent = e.message;
    	}
+});
+
+//Currently the Audio xAPI is not enabled for Persistent WebApp Mode
+//Attempts to toggle mute, expected to fail.
+const failButton = document.getElementById('failCase');
+failButton.addEventListener('click', async function(e) {
+   try {
+		xapi.Command.Audio.Volume.ToggleMute();
+
+   } catch(e) {
+		content.textContent = e.message;
+   }
+   
 });
 
 //Gets the current xStatus of LedControl Color and displays on the page.
