@@ -89,12 +89,11 @@ manualButton.addEventListener('click', async function(e) {
    	}
 });
 
+//xapi to set LED mode to off
 const offButton = document.getElementById('offButton');
 offButton.addEventListener('click', async function(e) {
    try {
-		xapi.Config.UserInterface.LedControl.Mode.set('Off');
-		content.textContent = `Set LED Control to Off`;
-
+		xapi.Command.UserInterface.LedControl.Color.Set({ Color: 'Red' });
    	} catch(e) {
 		content.textContent = e.message;
    	}
