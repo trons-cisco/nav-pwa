@@ -82,7 +82,7 @@ manualButton.addEventListener('click', async function(e) {
    try {
 		//Example xapi xConfiguration
 		xapi.Config.UserInterface.LedControl.Mode.set('Manual');
-		content.textContent = `Set Led Control to Manual`;	
+		content.textContent = `Set LED Control to Manual`;	
 
    	} catch(e) {
 		content.textContent = e.message;
@@ -93,7 +93,7 @@ const offButton = document.getElementById('offButton');
 offButton.addEventListener('click', async function(e) {
    try {
 		xapi.Config.UserInterface.LedControl.Mode.set('Off');
-		content.textContent = `Set Led Control to Off`;
+		content.textContent = `Set LED Control to Off`;
 
    	} catch(e) {
 		content.textContent = e.message;
@@ -121,7 +121,7 @@ function getCurrent() {
 			case 'Green':
 				 document.getElementById('ledRect').style.fill = color;
 				 break;
-			case 'Yellow':
+			case 'Gold':
 				 document.getElementById('ledRect').style.fill = color;
 				 break;
 			case 'Red':
