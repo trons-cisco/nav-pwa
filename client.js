@@ -121,7 +121,7 @@ function getCurrent() {
 			case 'Green':
 				 document.getElementById('ledRect').style.fill = color;
 				 break;
-			case 'Gold':
+			case 'Yellow':
 				 document.getElementById('ledRect').style.fill = color;
 				 break;
 			case 'Red':
