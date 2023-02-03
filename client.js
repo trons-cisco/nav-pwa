@@ -81,8 +81,19 @@ const manualButton = document.getElementById('manualButton');
 manualButton.addEventListener('click', async function(e) {
    try {
 		//Example xapi xConfiguration
-		xapi.Config.UserInterface.LedControl.Mode.set('Manual');
-		content.textContent = `Set Led Control to Manual`;	
+		xapi.Config.UserInterface.LedControl.Mode.set('Off');
+		content.textContent = `Set Led Control to Off`;	
+
+   	} catch(e) {
+		content.textContent = e.message;
+   	}
+});
+
+const autoButton = document.getElementById('autoButton');
+autoButton.addEventListener('click', async function(e) {
+   try {
+		xapi.Config.UserInterface.LedControl.Mode.set('Auto');
+		content.textContent = `Set Led Control to Auto`;
 
    	} catch(e) {
 		content.textContent = e.message;
