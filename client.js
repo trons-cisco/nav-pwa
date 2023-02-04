@@ -77,40 +77,16 @@ redButton.addEventListener('click', async function(e) {
    	}
 });
 
-const manualButton = document.getElementById('manualButton');
-manualButton.addEventListener('click', async function(e) {
+const offButton = document.getElementById('offButton');
+offButton.addEventListener('click', async function(e) {
    try {
 		//Example xapi xConfiguration
 		xapi.Command.UserInterface.LedControl.Color.Set({ Color: 'Off' });
-		content.textContent = `Set Led Control to Off`;	
+		content.textContent = `Set LED to Off`;	
 
    	} catch(e) {
 		content.textContent = e.message;
    	}
-});
-
-const autoButton = document.getElementById('autoButton');
-autoButton.addEventListener('click', async function(e) {
-   try {
-		xapi.Config.UserInterface.LedControl.Mode.set('Auto');
-		content.textContent = `Set Led Control to Auto`;
-
-   	} catch(e) {
-		content.textContent = e.message;
-   	}
-});
-
-//Currently the Audio xAPI is not enabled for Persistent WebApp Mode
-//Attempts to toggle mute, expected to fail.
-const failButton = document.getElementById('failCase');
-failButton.addEventListener('click', async function(e) {
-   try {
-		xapi.Command.Audio.Volume.ToggleMute();
-
-   } catch(e) {
-		content.textContent = e.message;
-   }
-   
 });
 
 //Gets the current xStatus of LedControl Color and displays on the page.
