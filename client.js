@@ -81,7 +81,7 @@ const manualButton = document.getElementById('manualButton');
 manualButton.addEventListener('click', async function(e) {
    try {
 		//Example xapi xConfiguration
-		xapi.Config.UserInterface.LedControl.Mode.set('Off');
+		xapi.Command.UserInterface.LedControl.Color.Set({ Color: 'Off' });
 		content.textContent = `Set Led Control to Off`;	
 
    	} catch(e) {
