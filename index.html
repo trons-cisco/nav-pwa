@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta charset="utf-8">
     <title>PWA Button LED Test App</title>
   </head>
   <style>
 	body {
-		background-color: DimGray;
+		background-color: DarkSalmon;
 		width: 100%;
-       		align-items: center;
-        	overflow-x: hidden;
+        align-items: center;
+        overflow-x: hidden;
  		justify-content: center;
+        position: center;
 
 }
 	 button {
@@ -65,12 +66,6 @@
 			<button id="redButton" style="background-color:red;">Red</button>
 			<button id="manualButton" style="color: white;background-color:black;">Off</button>
 		</div>
-	</div>
-	
-	<div class="ledStrip">
-		<svg width="100%" height="100">
-			<rect id="ledRect" width="100%" height="100" style="stroke-width:3;stroke:rgb(0,0,0)" />
-		</svg>
 	</div>
   </body>
   <script src="client.js"></script>
