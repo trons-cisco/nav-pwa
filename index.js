@@ -4,7 +4,7 @@
 //need to add xapi.Config.UserInterface.LedControl.Mode.set('Manual');
 // does this need to be a function?
 //function setledcontrolmanual(){
-//xapi.Config.UserInterface.LedControl.Mode.set(Manual);
+//xapi.Config.UserInterface.LedControl.Mode.set('Manual');
 //};
 
 //Initialize the xAPI on page load to make the xapi object available.
@@ -58,6 +58,7 @@ const xapistatus = document.getElementById('xapistatus');
 greenButton.addEventListener('click', async function(e) {
 	try {		
 		//Example of an xapi xCommand
+		xapi.Config.UserInterface.LedControl.Mode.set('Manual');
 		xapi.Command.UserInterface.LedControl.Color.Set({ Color: 'Green' });
 	} catch(e) {
 		content.textContent = e.message;
@@ -69,7 +70,7 @@ const yellowButton = document.getElementById('yellowButton');
 yellowButton.addEventListener('click', async function(e) {
 	try {
 	   	//Example of an xapi xCommand
-		xapi.Config.UserInterface.LedControl.Mode.set(Manual);
+		xapi.Config.UserInterface.LedControl.Mode.set('Manual');
 		xapi.Command.UserInterface.LedControl.Color.Set({ Color: 'Yellow' });
   	} catch(e) {
 		content.textContent = e.message;
@@ -81,7 +82,7 @@ const redButton = document.getElementById('redButton');
 redButton.addEventListener('click', async function(e) {
    try {
 	   //Example of an xapi xCommand
-	  	xapi.Config.UserInterface.LedControl.Mode.set(Manual);
+	  	xapi.Config.UserInterface.LedControl.Mode.set('Manual');
 		xapi.Command.UserInterface.LedControl.Color.Set({ Color: 'Red' });
    	} catch(e) {
 		content.textContent = e.message;
@@ -92,7 +93,7 @@ const offButton = document.getElementById('offButton');
 offButton.addEventListener('click', async function(e) {
    try {
 		//Example xapi xConfiguration
-	   	xapi.Config.UserInterface.LedControl.Mode.set(Manual);
+	   	xapi.Config.UserInterface.LedControl.Mode.set('Manual');
 		xapi.Command.UserInterface.LedControl.Color.Set({ Color: 'Off' });
    	} catch(e) {
 		content.textContent = e.message;
