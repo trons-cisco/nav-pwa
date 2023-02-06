@@ -4,7 +4,7 @@
 async function init() {
 	try {
 		xapi = await getXAPI();
-		xapistatus.textContent = "jsxapi available";
+		xapistatus.textContent = "jsxapi active";
 		unique_id = createPersistentCookie();
 		content.textContent = "Navigator ID: " + unique_id;
 		setupSubscriptions();
@@ -82,8 +82,6 @@ offButton.addEventListener('click', async function(e) {
    try {
 		//Example xapi xConfiguration
 		xapi.Command.UserInterface.LedControl.Color.Set({ Color: 'Off' });
-		content.textContent = `Set LED to Off`;	
-
    	} catch(e) {
 		content.textContent = e.message;
    	}
