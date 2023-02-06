@@ -11,7 +11,7 @@ async function init() {
 		getCurrent();
 	} catch(e) {
 		content.textContent = e.message;
-		xapistatus.textContent = "error getting jsxapi object";
+		xapistatus.textContent = "Houston, we have a problem...error getting jsxapi object";
 	}
 }
 
@@ -88,33 +88,9 @@ offButton.addEventListener('click', async function(e) {
 });
 
 //Gets the current xStatus of LedControl Color and displays on the page.
-function getCurrent() {
-	//Example xapi xStatus
-	xapi.Status.UserInterface.LedControl.Color.get().then((color) => {
-		switch(color) {
-			case 'Green':
-				 document.getElementById('ledRect').style.fill = color;
-				 break;
-			case 'Yellow':
-				 document.getElementById('ledRect').style.fill = color;
-				 break;
-			case 'Red':
-				 document.getElementById('ledRect').style.fill = color;
-				 break;
-			default: 
-				console.log("Unexpected color")
-				document.getElementById('ledRect').style.fill = 'orange';
-		}
-    })
-    .catch(function(error) {
-		console.log(error);
-    });
-}
-
-//Gets the current xStatus of LedControl Color and displays on the page.
 function setupSubscriptions() {
 	//Example xapi xStatus
-	content.textContent = "Setting up subscriptions";
+	content.textContent = "Bueller...Bueller...Bueller...";
 	xapi.Status.UserInterface.LedControl.Color.on(v =>content.textContent = v);
 	xapi.Status.UserInterface.LedControl.Color.on(v =>document.getElementById('ledRect').style.fill = v);
 }
