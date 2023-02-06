@@ -114,7 +114,7 @@ function getCurrent() {
 //Gets the current xStatus of LedControl Color and displays on the page.
 function setupSubscriptions() {
 	//Example xapi xStatus
-	content.textContent = "Setting up subscriptions";
+	content.textContent = "Checking stuff and things";
 	xapi.Status.UserInterface.LedControl.Color.on(v =>content.textContent = v);
 	xapi.Status.UserInterface.LedControl.Color.on(v =>document.getElementById('ledRect').style.fill = v);
 }
