@@ -1,3 +1,11 @@
+//I've Put my own flair on https://github.com/cisco-ce/roomos-samples/tree/main/navigator/navigator-webapp
+//Still fumbling through learning this coding stuff ;)
+
+//need to add xapi.Config.UserInterface.LedControl.Mode.set('Manual');
+function setledcontrolmanual(){
+	xapi.Config.UserInterface.LedControl.Mode.set('Manual');
+};
+
 //Initialize the xAPI on page load to make the xapi object available.
 //Creating a persistent Cookie with navigator ID is not necessary, 
 //just done as an example for how to distinguish between unique navigators.
