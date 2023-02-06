@@ -6,8 +6,6 @@ function setledcontrolmanual(){
 	xapi.Config.UserInterface.LedControl.Mode.set('Manual');
 };
 
-setledcontrolmanual();
-
 //Initialize the xAPI on page load to make the xapi object available.
 //Creating a persistent Cookie with navigator ID is not necessary, 
 //just done as an example for how to distinguish between unique navigators.
@@ -27,6 +25,7 @@ async function init() {
 
 window.onload = async function() {
 	init();
+	setledcontrolmanual();
 };
 
 //Persistent Cookie example for Unique Navigator ID:
