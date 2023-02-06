@@ -4,7 +4,7 @@
 //need to add xapi.Config.UserInterface.LedControl.Mode.set('Manual');
 // does this need to be a function?
 //function setledcontrolmanual(){
-	xapi.Config.UserInterface.LedControl.Mode.set('Manual');
+xapi.Config.UserInterface.LedControl.Mode.set(Manual);
 //};
 
 //Initialize the xAPI on page load to make the xapi object available.
