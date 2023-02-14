@@ -1,67 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-	<meta name="viewport" content="width=device-width" />
+<head>
+    <meta name="viewport" content="width=device-width" />
     <meta charset="utf-8">
     <title>PWA JSxAPI LED Test</title>
-  </head>
-  <style>
-	body {
-		background-color: WhiteSmoke;
-		width: 100%;
-        	align-items: center;
-        	overflow-x: hidden;
- 		justify-content: center;
-
-}
-	 button {
-		padding: 20px 40px;
-		margin: 10px;
-		font-size: 200%;
-		text-align: center;
-		cursor: pointer;
-		outline: none;
-		border: none;
-		border-radius: 100px;
-		box-shadow: 0 8px 16px black;
-		width: 100%;
-        	color: white;
-       		font-family: Verdana;
-		 
-	}
-	button:active {
-		background-color: #3e8e41;
-		box-shadow: 0 5px #666;
-		transform: translateY(4px);
-	}
-	.container { 
-		height: 500px;
-		position: relative;
-
-	}
-	.center {
-		margin: 0;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		-ms-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-	}
-  </style>
-  <body>
-	<div id ="content">Waiting on initialization...</div>
-	<div id ="xapistatus">Waiting on initialization...</div>
+</head>
+<style>
+    body {
+        background-color: WhiteSmoke;
+        width: 100%;
+        align-items: center;
+        overflow-x: hidden;
+        justify-content: center;
+    }
+    button {
+        padding: 20px 40px;
+        margin: 10px;
+        font-size: 200%;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        border-radius: 100px;
+        box-shadow: 0 8px 16px black;
+        width: 100%;
+        color: white;
+        font-family: Verdana;
+    }
+    button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+    .container {
+        height: 500px;
+        position: relative;
+    }
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+</style>
+<body>
+    <div id="content">Waiting on initialization...</div>
+    <div id="xapiStatus">Waiting on initialization...</div>
     <h1 style="text-align:center;margin-top: 30px;">Persistent Web App LED Test</h1>
-	<div class="container">
-		<div class="center">
-			<h2 style="text-align:center;">Change the Navigator LED color or turn it "Off" to validate jsxapi connectivity</h2>
-			<button id="greenButton" style="background-color:green;">Green</button>   
-			<button id="yellowButton" style="background-color:gold;">Yellow</button>   
-			<button id="redButton" style="background-color:red;">Red</button>
-			<button id="offButton" style="color: white;background-color:black;">Off</button>
-		</div>
-	</div>
-  </body>
-  <script src="index.js"></script>
-		<script type="text/javascript"></script>
+    <div class="container">
+        <div class="center">
+            <h2 style="text-align:center;">Change the Navigator LED color or turn it "Off" to validate jsxapi
+                connectivity</h2>
+            <button id="greenButton" style="background-color:green;">Green</button>
+            <button id="yellowButton" style="background-color:gold;">Yellow</button>
+            <button id="redButton" style="background-color:red;">Red</button>
+            <button id="offButton" style="color: white;background-color:black;">Off</button>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+<script type="text/javascript"></script>
 </html>
