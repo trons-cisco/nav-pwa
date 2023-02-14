@@ -26,7 +26,7 @@ function uuidv4() {
 // Xapi Command to set the LedControl Color to Green
 const greenButton = document.getElementById('greenButton');
 const content = document.getElementById('content');
-const xapiStatus = document.getElementById('xapiStatus');
+const xapiStatus = document.getElementById('xapistatus');
 
 greenButton.addEventListener('click', async function (e) {
   try {
